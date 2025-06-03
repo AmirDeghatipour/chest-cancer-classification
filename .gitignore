@@ -195,3 +195,6 @@ cython_debug/
 
 #Template
 template.py
+
+#Logs
+logs/*
