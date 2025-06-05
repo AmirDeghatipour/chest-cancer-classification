@@ -1,7 +1,8 @@
 --extra-index-url https://download.pytorch.org/whl/cu128
-torch
-torchvision
-torchaudio
+torch==2.7.0
+torchvision==0.18.0
+torchaudio==2.7.0
+torchinfo
 pytorch-lightning
 gdown
 pandas 
