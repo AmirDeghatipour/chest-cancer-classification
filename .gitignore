@@ -198,3 +198,6 @@ template.py
 
 #Logs
 logs/*
+
+#artifacts
+artifacts/*

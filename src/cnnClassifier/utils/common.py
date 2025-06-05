@@ -2,7 +2,7 @@ from pathlib import Path
 from box import ConfigBox
 from box.exceptions import BoxValueError
 import yaml
-from cnnClassifier.logging import logger
+from src.cnnClassifier.logging import logger
 
 
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
