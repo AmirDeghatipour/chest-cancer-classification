@@ -21,3 +21,20 @@ stages:
       - LEARNING_RATE
     outs:
       - artifacts/prepare_base_model
+
+
+  training:
+    cmd: python src/cnnClassifier/pipeline/stage_03_model_trainer.py
+    deps:
+      - src/cnnClassifier/pipeline/stage_03_model_trainer.py
+      - config/config.yaml
+      - artifacts/data_ingestion/Chest-CT-Scan-data
+      - artifacts/prepare_base_model
+    params:
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+      - LEARNING_RATE
+    outs:
+      - artifacts/training/model.pth
