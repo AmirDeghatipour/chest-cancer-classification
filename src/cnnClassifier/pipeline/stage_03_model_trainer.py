@@ -14,7 +14,7 @@ class ModelTrainingPipeline:
         training_config = config.get_training_config()
         logs_config = config.get_log_config()
         training = Training(config=training_config, logs= logs_config)
-        training.train()
+        training.run_optuna_study()
 
 
 

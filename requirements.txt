@@ -21,4 +21,5 @@ joblib
 streamlit
 tensorboard>=2.4.1
 torch-tb-profiler>=0.2.0
+optuna
 -e .

@@ -63,8 +63,8 @@ stages:
       size: 767
     - path: src/cnnClassifier/pipeline/stage_03_model_trainer.py
       hash: md5
-      md5: e5aa2af3e6f3870253782180717c0ed8
-      size: 858
+      md5: d39c2daf0c8d5ddd7fb7007b8533858b
+      size: 869
     params:
       params.yaml:
         AUGMENTATION: true
@@ -78,5 +78,5 @@ stages:
     outs:
     - path: artifacts/training/model.pth
       hash: md5
-      md5: 9e4e6d947291dd712bd4df052650ffff
-      size: 537094647
+      md5: e8164362e51e2eb27bdc28105075fccb
+      size: 1493528458
