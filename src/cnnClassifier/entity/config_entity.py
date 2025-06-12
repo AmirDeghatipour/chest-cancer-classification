@@ -46,7 +46,7 @@ class TrainingConfig:
 
 
 
-@dataclass(frozen=True)
+@dataclass
 class EvaluationConfig:
     path_of_model: Path
     training_data: Path
