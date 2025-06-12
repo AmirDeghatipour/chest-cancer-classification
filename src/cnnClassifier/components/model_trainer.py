@@ -29,7 +29,7 @@ class TrainingDataModule(pl.LightningDataModule):
             transforms.Resize(self.config.params_image_size[:-1]),
             transforms.ToTensor()
         ]
-        if self.config.params_is_augmentation:
+        if getattr(self.config, "params_is_augmentation", False):
             transform_list = [
                 transforms.RandomHorizontalFlip(),
                 transforms.RandomRotation(20),
@@ -89,7 +89,7 @@ class Training:
             monitor="val_loss",
             mode="min",
             save_top_k=1,
-            save_weights_only=False,
+            save_weights_only=True,
             dirpath=checkpoint_dir,
             filename="best-model-{epoch:02d}-{val_loss:.4f}"
         )

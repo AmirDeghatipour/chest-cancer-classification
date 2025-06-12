@@ -4,7 +4,8 @@ from src.cnnClassifier.utils.common import read_yaml, create_directories
 from src.cnnClassifier.entity.config_entity import (DataIngestionConfig,
                                                     PrepareBaseModelConfig,
                                                     LogConfig,
-                                                    TrainingConfig)
+                                                    TrainingConfig,
+                                                    EvaluationConfig)
 
 
 
@@ -91,3 +92,17 @@ class ConfigurationManager:
         )
 
         return training_config
+    
+
+
+
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            path_of_model="artifacts/training/model.pth",
+            training_data="artifacts/data_ingestion/Chest-CT-Scan-data",
+            base_model_updated="artifacts/prepare_base_model/base_model_updated.pth",
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE
+        )
+        return eval_config
